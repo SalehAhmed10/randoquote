@@ -1,43 +1,44 @@
 
+// const author = document.querySelector("#author");
+// const quote = document.querySelector("#quote");
 
+// const btn = document.querySelector("#btn");
 
-$.getJSON('https://api.quotable.io/random', function (data) {
-  console.log(data);
+// btn.addEventListener("click", genQuote);
 
-  var quotes = data.content;
-  
-  var author = data.author;
+//   function getQuote(){
 
-	$('#quotes').append(quotes);
-	
-	$('#author').append(author);
+//       fetch('https://api.quotable.io/random')
+//         .then(response => response.json())
+//         .then(data => {
+//           console.log(data)
+//         })
 
+//     }  
+
+const quote = document.querySelector("#quote");
+
+const author = document.querySelector("#author");
+
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", genQuote);
+
+function genQuote(){
+
+  fetch("https://animechan.vercel.app/api/random")
+  .then(res => res.json())
+  // .then(data => console.log(data))
+  // .then(data => console.log(data))
+  .then(data => { 
+
+    
+    
+    quote.innerHTML = `"${data.quote}"`;
+
+    author.innerHTML = `"${data.character}"`;
+
+    
 })
-
-// const quotes = document.getElementById("quotes");
-// const author = document.getElementById("author");
-// const genbtn = document.getElementById("genbtn");
-// let realData = "";
-
-
-// const getNewQuotes = () => {
-// 	let rnum = Math.floor(Math.random() * 10);
-// 	quotes.innerText = `${realData[rnum].text}`;
-// 	author.innerText = `${realData[rnum].author}`;
-
-// };
-// 	const getQuotes = async () => {
-	
-// 		const api = "https://type.fit/api/quotes";
-
-// 		try{ 
-// 			let data = await fetch(api);
-// 			realData = await data.json();
-
-// 		getNewQuotes();
-// 	} catch (error) {}
-// };
-
-// genbtn.addEventListener('clicks')
-// getQuotes()
+}
 
