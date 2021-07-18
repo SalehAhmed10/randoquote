@@ -50,8 +50,8 @@
                     
                     <div class="px-2">
                       <div class="quote-box">
-                        <p id="quotes"></p>
-                        <small id="author"></small>
+                        <p id="quote"> Press the button to Generate a new Quote</p>
+                        <small style="font-style: italic;" id="author"> author</small>
                       </div>
                       
                     </div>
@@ -59,7 +59,7 @@
                     
                 </div>
                 <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-                <button id="genbtn">New Quote</button>
+                <button id="btn">Generate Quote</button>
                   </div>
               </div>
         </div>
